@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-base: #f8f7f4;
+  --color-white: #ffffff;
+  --color-heading: #111827;
+  --color-body: #1f2937;
+  --color-muted: #6b7280;
+  --color-indigo: #4338ca;
+  --color-indigo-dark: #3730a3;
+  --color-indigo-light: #eef2ff;
+  --color-indigo-muted: #818cf8;
+  --color-amber: #f59e0b;
+  --color-amber-light: #fef3c7;
+  --color-slate-bg: #f1f5f9;
+  --color-warm-bg: #faf5ee;
+  --color-border: #e2e8f0;
+  --color-border-dark: #cbd5e1;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-green-500: #22c55e;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f7f4;
+  color: #1f2937;
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: rgba(67, 56, 202, 0.15);
+  color: #111827;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f7f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4338ca;
+}
+
+/* Force dark text colors - bypasses Tailwind color resolution issues */
+.dark-text { color: #111827 !important; }
+.body-text { color: #1f2937 !important; }
+.muted-text { color: #6b7280 !important; }
+.placeholder-muted::placeholder { color: #9ca3af !important; }
+.bg-green { background-color: #22c55e !important; }
+.text-indigo-force { color: #4338ca; }
+.text-indigo-force:hover { color: #ffffff; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
