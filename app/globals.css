@@ -81,3 +81,60 @@ body {
   0% { transform: scale(0.8); opacity: 1; }
   100% { transform: scale(2); opacity: 0; }
 }
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33%  { transform: translateY(-22px) translateX(12px); }
+  66%  { transform: translateY(10px) translateX(-8px); }
+}
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33%  { transform: translateY(18px) translateX(-14px); }
+  66%  { transform: translateY(-10px) translateX(10px); }
+}
+@keyframes drift-x {
+  0%, 100% { transform: translateX(0px) scale(1); }
+  50%  { transform: translateX(28px) scale(1.04); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes particle-bob {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.5; }
+  50%  { transform: translateY(-14px) scale(1.2); opacity: 1; }
+}
+.animate-float-slow    { animation: float-slow    10s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 13s ease-in-out infinite; }
+.animate-drift-x       { animation: drift-x       15s ease-in-out infinite; }
+.animate-spin-slow     { animation: spin-slow     20s linear infinite; }
+.animate-particle-bob  { animation: particle-bob   6s ease-in-out infinite; }
+
+/* Morphing blob */
+@keyframes morph {
+  0%,100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25%     { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50%     { border-radius: 50% 60% 30% 40% / 40% 50% 60% 50%; }
+  75%     { border-radius: 40% 50% 60% 30% / 60% 40% 50% 40%; }
+}
+/* Slow diagonal gradient shift */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* Pulse glow */
+@keyframes pulse-glow {
+  0%,100% { opacity: 0.15; transform: scale(1); }
+  50%     { opacity: 0.35; transform: scale(1.08); }
+}
+/* Slow orbit */
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+}
+.animate-morph        { animation: morph          10s ease-in-out infinite; }
+.animate-morph-slow   { animation: morph          16s ease-in-out infinite reverse; }
+.animate-gradient     { animation: gradient-shift 12s ease infinite; background-size: 300% 300%; }
+.animate-pulse-glow   { animation: pulse-glow      5s ease-in-out infinite; }
+.animate-orbit        { animation: orbit          14s linear infinite; }
+.animate-orbit-reverse{ animation: orbit          18s linear infinite reverse; }

@@ -21,7 +21,13 @@ export default function DevOpsExposure() {
 
   return (
     <section className="py-16 sm:py-24 bg-base relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(67,56,202,0.04),transparent_50%)]" />
+      <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] bg-indigo/6 blur-3xl animate-morph-slow" />
+      <div className="absolute -top-10 -right-10 w-80 h-80 bg-amber/7 blur-3xl animate-morph" />
+      <div className="absolute top-1/2 left-1/2 w-52 h-52 bg-indigo/4 blur-xl animate-pulse-glow hidden sm:block" />
+      <div className="absolute top-[6%] left-[6%] w-20 h-20 rounded-full border border-indigo/10 animate-spin-slow hidden sm:block" />
+      <div className="absolute bottom-[6%] right-[6%] w-16 h-16 rounded-full border border-amber/12 animate-spin-slow hidden sm:block" style={{animationDuration:"24s", animationDirection:"reverse"}} />
+      <div className="absolute top-[20%] right-[10%] w-2 h-2 rounded-full bg-indigo/25 animate-particle-bob" style={{animationDelay:"1.2s"}} />
+      <div className="absolute bottom-[20%] left-[10%] w-1.5 h-1.5 rounded-full bg-amber/30 animate-particle-bob" style={{animationDelay:"3s"}} />
 
       <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>

@@ -52,7 +52,13 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-16 sm:py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-20 left-1/4 w-80 h-80 bg-amber/5 rounded-full blur-3xl hidden sm:block" />
+      <div className="absolute -top-10 -right-10 w-[380px] h-[380px] bg-amber/6 blur-3xl animate-morph" />
+      <div className="absolute -bottom-10 -left-10 w-80 h-80 bg-indigo/6 blur-3xl animate-morph-slow" />
+      <div className="absolute top-1/2 right-1/4 w-48 h-48 bg-amber/5 blur-xl animate-pulse-glow hidden sm:block" />
+      <div className="absolute top-[8%] right-[7%] w-24 h-24 rounded-full border border-indigo/10 animate-spin-slow hidden sm:block" style={{animationDuration:"22s"}} />
+      <div className="absolute bottom-[8%] left-[5%] w-16 h-16 rounded-full border border-amber/12 animate-spin-slow hidden sm:block" style={{animationDuration:"30s", animationDirection:"reverse"}} />
+      <div className="absolute top-[12%] left-[8%] w-2 h-2 rounded-full bg-indigo/25 animate-particle-bob" style={{animationDelay:"1s"}} />
+      <div className="absolute bottom-[12%] right-[8%] w-1.5 h-1.5 rounded-full bg-amber/30 animate-particle-bob" style={{animationDelay:"2.8s"}} />
       <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <p className="text-indigo font-semibold text-sm mb-2 tracking-wide uppercase">What I Built</p>

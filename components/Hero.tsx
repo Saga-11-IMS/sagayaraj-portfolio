@@ -11,8 +11,29 @@ const stats = [
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-indigo-light via-base to-warm-bg">
-      <div className="absolute top-20 -left-32 w-96 h-96 bg-indigo/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 -right-32 w-96 h-96 bg-amber/10 rounded-full blur-3xl" />
+      {/* morphing blobs */}
+      <div className="absolute -top-10 -left-24 w-[500px] h-[500px] bg-indigo/8 blur-3xl animate-morph" />
+      <div className="absolute -bottom-10 -right-24 w-96 h-96 bg-amber/10 blur-3xl animate-morph-slow" />
+      <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-indigo/5 blur-2xl animate-float-slow" />
+      {/* spinning concentric rings */}
+      <div className="absolute top-[6%] right-[5%] w-32 h-32 rounded-full border border-indigo/12 animate-spin-slow hidden lg:block" />
+      <div className="absolute top-[6%] right-[5%] w-52 h-52 rounded-full border border-indigo/6 hidden lg:block" style={{animation:"spin-slow 32s linear infinite reverse", marginTop:"-2.5rem", marginRight:"-2.5rem"}} />
+      <div className="absolute bottom-[10%] left-[3%] w-24 h-24 rounded-full border border-amber/15 animate-spin-slow hidden lg:block" style={{animationDuration:"22s"}} />
+      {/* orbiting dots */}
+      <div className="absolute top-[6%] right-[5%] hidden lg:block" style={{width:"52px", height:"52px"}}>
+        <div className="w-2.5 h-2.5 rounded-full bg-indigo/25 animate-orbit" />
+      </div>
+      <div className="absolute bottom-[10%] left-[3%] hidden lg:block" style={{width:"24px", height:"24px"}}>
+        <div className="w-2 h-2 rounded-full bg-amber/35 animate-orbit-reverse" />
+      </div>
+      {/* pulsing glows */}
+      <div className="absolute top-[38%] left-[28%] w-48 h-48 rounded-full bg-indigo/6 blur-xl animate-pulse-glow" />
+      <div className="absolute bottom-[28%] right-[32%] w-36 h-36 rounded-full bg-amber/8 blur-xl animate-pulse-glow" style={{animationDelay:"2.5s"}} />
+      {/* floating particles */}
+      <div className="absolute top-[18%] left-[22%] w-2 h-2 rounded-full bg-indigo/30 animate-particle-bob" style={{animationDelay:"0s"}} />
+      <div className="absolute top-[65%] left-[12%] w-1.5 h-1.5 rounded-full bg-amber/40 animate-particle-bob" style={{animationDelay:"1.5s"}} />
+      <div className="absolute top-[75%] right-[22%] w-2 h-2 rounded-full bg-indigo/25 animate-particle-bob" style={{animationDelay:"3s"}} />
+      <div className="absolute top-[48%] left-[50%] w-1.5 h-1.5 rounded-full bg-amber/30 animate-particle-bob" style={{animationDelay:"0.8s"}} />
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-10 w-full py-20 sm:py-32">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">

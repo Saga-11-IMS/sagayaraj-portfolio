@@ -20,6 +20,13 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-16 sm:py-24 bg-base relative overflow-hidden">
+      <div className="absolute -top-20 -left-20 w-[400px] h-[400px] bg-indigo/6 blur-3xl animate-morph-slow" />
+      <div className="absolute -bottom-10 -right-10 w-80 h-80 bg-amber/8 blur-3xl animate-morph" />
+      <div className="absolute top-1/2 left-1/2 w-52 h-52 bg-indigo/4 blur-2xl animate-pulse-glow hidden sm:block" />
+      <div className="absolute top-[10%] right-[8%] w-24 h-24 rounded-full border border-indigo/10 animate-spin-slow hidden sm:block" />
+      <div className="absolute bottom-[10%] left-[6%] w-16 h-16 rounded-full border border-amber/12 animate-spin-slow hidden sm:block" style={{animationDuration:"28s", animationDirection:"reverse"}} />
+      <div className="absolute top-[15%] left-[10%] w-2 h-2 rounded-full bg-indigo/25 animate-particle-bob" style={{animationDelay:"1.8s"}} />
+      <div className="absolute bottom-[20%] right-[10%] w-1.5 h-1.5 rounded-full bg-amber/30 animate-particle-bob" style={{animationDelay:"3.2s"}} />
       <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[200px] sm:text-[280px] font-extrabold text-indigo/[0.03] leading-none select-none pointer-events-none tracking-tighter hidden sm:block">
         {groups[active].num}
       </div>

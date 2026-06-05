@@ -45,8 +45,13 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-16 sm:py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-indigo/3 rounded-full blur-3xl hidden sm:block" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-amber/5 rounded-full blur-3xl hidden sm:block" />
+      <div className="absolute -top-10 -right-10 w-[380px] h-[380px] bg-indigo/6 blur-3xl animate-morph" />
+      <div className="absolute -bottom-10 -left-10 w-80 h-80 bg-amber/8 blur-3xl animate-morph-slow" />
+      <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-indigo/4 blur-xl animate-pulse-glow hidden sm:block" />
+      <div className="absolute top-[8%] left-[5%] w-20 h-20 rounded-full border border-indigo/10 animate-spin-slow hidden sm:block" style={{animationDuration:"26s"}} />
+      <div className="absolute bottom-[8%] right-[5%] w-14 h-14 rounded-full border border-amber/12 animate-spin-slow hidden sm:block" style={{animationDuration:"20s", animationDirection:"reverse"}} />
+      <div className="absolute top-[30%] right-[8%] w-2 h-2 rounded-full bg-indigo/25 animate-particle-bob" style={{animationDelay:"2s"}} />
+      <div className="absolute bottom-[30%] left-[8%] w-1.5 h-1.5 rounded-full bg-amber/30 animate-particle-bob" style={{animationDelay:"0.7s"}} />
 
       <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
