@@ -11,6 +11,7 @@ const items = [
   { title: "Ansible Automation", desc: "Automated monitoring and exporter deployment using Ansible playbooks, Jinja2 templates, and Ansible Vault.", icon: "⚙️" },
   { title: "Kubernetes Foundations", desc: "Hands-on with Pods, Deployments, Services, and namespaces — basic app deployments in lab environments.", icon: "☸️" },
   { title: "AWS Fundamentals", desc: "Basic exposure to EC2, IAM, S3, EBS, VPC, RDS, CloudWatch, and Security Groups through practical labs.", icon: "☁️" },
+  { title: "Terraform", desc: "Infrastructure as Code (IaC) using Terraform to define, provision, and manage cloud infrastructure.", icon: "🏗️" },
   { title: "Git & Version Control", desc: "Using Git for version control and repository management within CI/CD workflows.", icon: "🌿" },
 ];
 
