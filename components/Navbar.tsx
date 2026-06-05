@@ -43,7 +43,7 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo rounded-full group-hover:w-full transition-all duration-300" />
             </a>
           ))}
-          <a href="/sagayaraj_Resume.pdf" download
+          <a href="/Saga-Devops-Resume.pdf" download
             className="ml-1 px-5 py-2 text-sm font-semibold text-white bg-indigo rounded-lg hover:bg-indigo-dark transition-colors shadow-md shadow-indigo/20 hover:-translate-y-0.5 transform duration-200"
           >Resume</a>
         </div>
@@ -64,7 +64,7 @@ export default function Navbar() {
                   {l.label}
                 </a>
               ))}
-              <a href="/sagayaraj_Resume.pdf" download
+              <a href="/Saga-Devops-Resume.pdf" download
                 className="mt-2 px-5 py-2 text-sm font-semibold text-white bg-indigo rounded-lg hover:bg-indigo-dark transition-colors"
               >Resume</a>
             </div>

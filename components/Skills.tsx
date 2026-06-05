@@ -7,7 +7,7 @@ const groups = [
   { title: "OS & Hosting", num: "01", skills: ["Linux (CentOS, AlmaLinux, Ubuntu)", "cPanel/WHM", "Plesk", "DirectAdmin", "CWP Pro", "Webuzo", "CloudLinux", "CageFS"] },
   { title: "Web Stack", num: "02", skills: ["Apache", "Nginx", "LiteSpeed", "WordPress"] },
   { title: "Databases", num: "03", skills: ["MySQL", "MariaDB", "MongoDB", "SQLite"] },
-  { title: "AWS", num: "04", skills: ["EC2", "IAM", "S3", "EBS", "EFS", "VPC", "RDS", "Security Groups", "Auto Scaling", "CloudFront", "CloudWatch"] },
+  { title: "AWS", num: "04", skills: ["EC2", "IAM", "S3", "EBS", "EFS", "VPC", "RDS", "Security Groups", "Auto Scaling", "CloudFront", "CloudWatch", "VPC Peering"] },
   { title: "DevOps & Automation", num: "05", skills: ["Git", "Jenkins CI/CD", "Docker", "Ansible", "Kubernetes", "Cron Jobs", "Log Analysis"] },
   { title: "Email & DNS", num: "06", skills: ["Exim", "Mailman", "Cloudflare DNS", "Delivery Troubleshooting", "Mailbox Quota Mgmt"] },
   { title: "Soft Skills", num: "07", skills: ["Problem-solving", "Adaptability", "Time Management", "Communication", "Teamwork"] },
