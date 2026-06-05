@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Mail, Phone, ExternalLink, MapPin } from "lucide-react";
+import ParticleCanvas from "./ParticleCanvas";
 
 export default function Contact() {
   const ref = useRef(null);
@@ -10,13 +11,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-16 sm:py-24 bg-base relative overflow-hidden">
-      <div className="absolute -bottom-10 -right-10 w-[400px] h-[400px] bg-indigo/6 blur-3xl animate-morph" />
-      <div className="absolute -top-10 -left-10 w-80 h-80 bg-amber/7 blur-3xl animate-morph-slow" />
-      <div className="absolute top-1/2 left-1/2 w-52 h-52 bg-indigo/4 blur-xl animate-pulse-glow hidden sm:block" />
-      <div className="absolute top-[8%] right-[6%] w-20 h-20 rounded-full border border-indigo/10 animate-spin-slow hidden sm:block" />
-      <div className="absolute bottom-[8%] left-[6%] w-14 h-14 rounded-full border border-amber/12 animate-spin-slow hidden sm:block" style={{animationDuration:"22s", animationDirection:"reverse"}} />
-      <div className="absolute top-[30%] right-[12%] w-2 h-2 rounded-full bg-indigo/25 animate-particle-bob" style={{animationDelay:"1.5s"}} />
-      <div className="absolute bottom-[30%] left-[12%] w-1.5 h-1.5 rounded-full bg-amber/30 animate-particle-bob" style={{animationDelay:"3.5s"}} />
+      <ParticleCanvas count={40} opacity={0.5} />
 
       <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}

@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, GraduationCap, BookOpen, Globe, Rocket, BriefcaseBusiness } from "lucide-react";
+import ParticleCanvas from "./ParticleCanvas";
 
 const info = [
   { label: "Location", value: "Coimbatore, Tamil Nadu", Icon: MapPin },
@@ -19,13 +20,7 @@ export default function About() {
 
   return (
     <section id="about" className="py-16 sm:py-24 bg-white relative overflow-hidden">
-      <div className="absolute -top-20 -right-20 w-[420px] h-[420px] bg-indigo/6 blur-3xl animate-morph" />
-      <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-amber/8 blur-3xl animate-morph-slow" />
-      <div className="absolute top-1/2 left-1/2 w-56 h-56 bg-indigo/4 blur-2xl animate-pulse-glow hidden sm:block" />
-      <div className="absolute top-[8%] left-[5%] w-20 h-20 rounded-full border border-indigo/10 animate-spin-slow hidden sm:block" />
-      <div className="absolute bottom-[8%] right-[5%] w-16 h-16 rounded-full border border-amber/12 animate-spin-slow hidden sm:block" style={{animationDuration:"25s", animationDirection:"reverse"}} />
-      <div className="absolute top-[22%] right-[8%] w-2 h-2 rounded-full bg-indigo/25 animate-particle-bob" style={{animationDelay:"1s"}} />
-      <div className="absolute bottom-[22%] left-[8%] w-1.5 h-1.5 rounded-full bg-amber/35 animate-particle-bob" style={{animationDelay:"2.5s"}} />
+      <ParticleCanvas count={40} opacity={0.55} />
       <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <p className="text-indigo font-semibold text-sm mb-2 tracking-wide uppercase">About Me</p>
