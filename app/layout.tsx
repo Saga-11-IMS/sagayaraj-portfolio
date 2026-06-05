@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sagayaraj J — System Engineer & DevOps",
+  title: "Sagayaraj J — Linux System Engineer / Production Support",
   description:
-    "Portfolio of Sagayaraj J — System Engineer transitioning into DevOps with expertise in Linux, cloud infrastructure, CI/CD, and monitoring.",
+    "Portfolio of Sagayaraj J — Linux System Engineer transitioning into DevOps with expertise in Linux infrastructure, CI/CD, containers, automation, and monitoring.",
 };
 
 export default function RootLayout({

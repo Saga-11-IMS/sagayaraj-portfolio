@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "2+", label: "Years Experience" },
+  { value: "4+", label: "Years Experience" },
   { value: "50+", label: "Servers Managed" },
   { value: "10+", label: "Tools & Platforms" },
 ];
@@ -38,7 +38,7 @@ export default function Hero() {
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-4 sm:mt-6 body-text text-base sm:text-lg lg:text-xl leading-relaxed max-w-xl">
               I build, manage, and automate Linux infrastructure. Currently exploring the DevOps
-              ecosystem — Docker, CI/CD, monitoring, and cloud-native tooling.
+              ecosystem — Docker, Jenkins CI/CD, monitoring, and cloud-native tooling.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.5 }}
@@ -47,7 +47,7 @@ export default function Hero() {
                 className="px-5 sm:px-7 py-3 sm:py-3.5 text-sm font-semibold text-white bg-indigo rounded-lg hover:bg-indigo-dark transition-colors shadow-lg shadow-indigo/25 hover:-translate-y-0.5 transform duration-200">
                 Get In Touch
               </a>
-              <a href="/sagayaraj_Resume.pdf" download
+              <a href="/Saga-Devops-Resume.pdf" download
                 className="px-5 sm:px-7 py-3 sm:py-3.5 text-sm font-semibold text-indigo bg-white border-2 border-indigo/20 rounded-lg hover:border-indigo/40 hover:bg-indigo-light transition-all hover:-translate-y-0.5 transform duration-200 shadow-sm">
                 Download Resume
               </a>
