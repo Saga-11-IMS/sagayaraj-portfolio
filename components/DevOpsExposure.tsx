@@ -2,15 +2,17 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import ParticleCanvas from "./ParticleCanvas";
 
 const items = [
-  { title: "CI/CD Pipelines", desc: "Built Jenkins pipelines automating GitHub integration, Docker image creation, and container-based deployments on Linux.", icon: "🔄", highlight: true },
-  { title: "Docker & Containers", desc: "Created and managed Dockerfiles — image lifecycle, port mapping, and deployment validation in lab environments.", icon: "🐳", highlight: true },
-  { title: "Monitoring & Observability", desc: "Deployed Prometheus, Grafana, and Alertmanager with Slack/Telegram alerting for Linux infrastructure.", icon: "📊", highlight: true },
+  { title: "CI/CD Pipelines", desc: "Built Jenkins pipelines automating GitHub integration, Docker image creation, and container-based deployments on Linux.", icon: "🔄" },
+  { title: "Docker & Containers", desc: "Created and managed Dockerfiles — image lifecycle, port mapping, and deployment validation in lab environments.", icon: "🐳" },
+  { title: "Monitoring & Observability", desc: "Deployed Prometheus, Grafana, and Alertmanager with Slack/Telegram alerting for Linux infrastructure.", icon: "📊" },
   { title: "Jenkins Administration", desc: "Administered Jenkins on Linux — pipeline troubleshooting, permission management, and log analysis.", icon: "🔧" },
   { title: "Ansible Automation", desc: "Automated monitoring and exporter deployment using Ansible playbooks, Jinja2 templates, and Ansible Vault.", icon: "⚙️" },
   { title: "Kubernetes Foundations", desc: "Hands-on with Pods, Deployments, Services, and namespaces — basic app deployments in lab environments.", icon: "☸️" },
   { title: "AWS Fundamentals", desc: "Basic exposure to EC2, IAM, S3, EBS, VPC, RDS, CloudWatch, and Security Groups through practical labs.", icon: "☁️" },
+  { title: "Terraform", desc: "Infrastructure as Code (IaC) using Terraform to define, provision, and manage cloud infrastructure.", icon: "🏗️" },
   { title: "Git & Version Control", desc: "Using Git for version control and repository management within CI/CD workflows.", icon: "🌿" },
 ];
 
@@ -20,7 +22,7 @@ export default function DevOpsExposure() {
 
   return (
     <section className="py-16 sm:py-24 bg-base relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(67,56,202,0.04),transparent_50%)]" />
+      <ParticleCanvas count={40} opacity={0.5} />
 
       <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
@@ -37,11 +39,7 @@ export default function DevOpsExposure() {
               animate={v ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
               whileHover={{ y: -6, scale: 1.02, transition: { duration: 0.2 } }}
-              className={`rounded-xl p-4 sm:p-6 bg-white transition-all duration-300 cursor-default shadow-sm hover:shadow-xl ${
-                item.highlight
-                  ? "border-l-4 border-l-indigo border border-indigo/10"
-                  : "border border-border hover:border-indigo/20"
-              }`}>
+              className="rounded-xl p-4 sm:p-6 bg-white transition-all duration-300 cursor-default shadow-sm hover:shadow-xl border border-border hover:border-indigo/20">
               <span className="text-xl sm:text-2xl lg:text-3xl mb-2 sm:mb-3 block">{item.icon}</span>
               <h3 className="dark-text font-bold text-sm sm:text-base lg:text-xl mb-2">{item.title}</h3>
               <p className="body-text text-xs sm:text-sm lg:text-base leading-relaxed">{item.desc}</p>

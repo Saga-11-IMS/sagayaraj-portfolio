@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import ParticleCanvas from "./ParticleCanvas";
 
 const projects = [
   {
@@ -52,7 +53,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-16 sm:py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-20 left-1/4 w-80 h-80 bg-amber/5 rounded-full blur-3xl hidden sm:block" />
+      <ParticleCanvas count={40} opacity={0.5} />
       <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <p className="text-indigo font-semibold text-sm mb-2 tracking-wide uppercase">What I Built</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ParticleCanvas from "./ParticleCanvas";
 
 const stats = [
   { value: "4+", label: "Years Experience" },
@@ -11,8 +12,7 @@ const stats = [
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-indigo-light via-base to-warm-bg">
-      <div className="absolute top-20 -left-32 w-96 h-96 bg-indigo/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 -right-32 w-96 h-96 bg-amber/10 rounded-full blur-3xl" />
+      <ParticleCanvas count={70} opacity={0.9} />
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-10 w-full py-20 sm:py-32">
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">

@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import ParticleCanvas from "./ParticleCanvas";
 
 const jobs = [
   {
@@ -45,8 +46,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="py-16 sm:py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-72 h-72 bg-indigo/3 rounded-full blur-3xl hidden sm:block" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-amber/5 rounded-full blur-3xl hidden sm:block" />
+      <ParticleCanvas count={40} opacity={0.55} />
 
       <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>

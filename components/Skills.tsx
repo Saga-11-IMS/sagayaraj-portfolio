@@ -2,6 +2,7 @@
 
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
+import ParticleCanvas from "./ParticleCanvas";
 
 const groups = [
   { title: "OS & Hosting", num: "01", skills: ["Linux (CentOS, AlmaLinux, Ubuntu)", "cPanel/WHM", "Plesk", "DirectAdmin", "CWP Pro", "Webuzo", "CloudLinux", "CageFS"] },
@@ -20,6 +21,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-16 sm:py-24 bg-base relative overflow-hidden">
+      <ParticleCanvas count={40} opacity={0.5} />
       <div className="absolute -right-10 top-1/2 -translate-y-1/2 text-[200px] sm:text-[280px] font-extrabold text-indigo/[0.03] leading-none select-none pointer-events-none tracking-tighter hidden sm:block">
         {groups[active].num}
       </div>

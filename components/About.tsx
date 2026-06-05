@@ -3,9 +3,10 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { MapPin, GraduationCap, BookOpen, Globe, Rocket, BriefcaseBusiness } from "lucide-react";
+import ParticleCanvas from "./ParticleCanvas";
 
 const info = [
-  { label: "Location", value: "Kallakurichi, Tamil Nadu", Icon: MapPin },
+  { label: "Location", value: "Coimbatore, Tamil Nadu", Icon: MapPin },
   { label: "Education", value: "B.E (EEE), UCE Panruti (2013–17)", Icon: GraduationCap },
   { label: "Course", value: "Infra Management Services", Icon: BookOpen },
   { label: "Languages", value: "English, Tamil", Icon: Globe },
@@ -18,8 +19,9 @@ export default function About() {
   const v = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" className="py-16 sm:py-24 bg-white">
-      <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10">
+    <section id="about" className="py-16 sm:py-24 bg-white relative overflow-hidden">
+      <ParticleCanvas count={40} opacity={0.55} />
+      <div ref={ref} className="mx-auto max-w-6xl px-5 sm:px-10 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}>
           <p className="text-indigo font-semibold text-sm mb-2 tracking-wide uppercase">About Me</p>
           <h2 className="dark-text text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Who I Am</h2>
@@ -28,14 +30,14 @@ export default function About() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={v ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.1 }}
           className="max-w-3xl mb-10 sm:mb-14">
-          <p style={{ color: '#1f2937' }} className="leading-[1.9] text-[15px] sm:text-base lg:text-[17px] mb-4 sm:mb-5">
+          <p style={{ color: '#1f2937' }} className="leading-[1.9] text-[15px] sm:text-base lg:text-[17px] mb-4 sm:mb-5 text-justify">
             Linux System Engineer with <span style={{ color: '#111827' }} className="font-semibold">4+ years</span> of overall
             IT infrastructure and technical support experience, including <span style={{ color: '#111827' }} className="font-semibold">2+ years</span> specializing
             in production Linux server administration, hosting platforms, and cloud-based services. Experienced
             in troubleshooting live web applications across Apache, Nginx, LiteSpeed, PHP-FPM, MySQL/MariaDB,
             DNS, SSL, mail services, and cPanel-based environments.
           </p>
-          <p style={{ color: '#1f2937' }} className="leading-[1.9] text-[15px] sm:text-base lg:text-[17px]">
+          <p style={{ color: '#1f2937' }} className="leading-[1.9] text-[15px] sm:text-base lg:text-[17px] text-justify">
             Skilled in incident management, log analysis, root cause analysis (RCA), server migrations, and
             infrastructure monitoring. Worked with Docker, Jenkins CI/CD, Ansible automation, Prometheus, and
             Grafana through infrastructure projects and lab environments — with a growing focus on{" "}
